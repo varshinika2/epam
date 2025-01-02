@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: #90EE90; /* Light green background */
+            color: red;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-block-start: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: start;
+            padding: 20px;
+            border: 2px solid red;
+            border-radius: 10px;
+            background-color: white;
+            margin: 20px auto;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            inline-size: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid red;
+            border-radius: 5px;
+            background-color: white;
+            color: red;
+        }
+
+        input::placeholder {
+            color: red;
+        }
+
+        button {
+            background-color: red; /* Red background for submit button */
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+        }
+
+        button:hover {
+            background-color: darkred; /* Dark red on hover */
+            color: white;
+        }
+
+        .subjects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .subject-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .subject-label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form action="#" method="POST">
+        <!-- Name -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+        <!-- Section Dropdown -->
+        <label for="section">Section:</label><br>
+        <select id="section" name="section" required>
+            <option value="" disabled selected>Select your section</option>
+            <option value="A">AIML A1</option>
+            <option value="B">AIML A2</option>
+        </select><br><br>
+
+        <!-- Roll Number -->
+        <label for="roll">Roll Number:</label><br>
+        <input type="text" id="roll" name="roll" placeholder="Enter your roll number" required><br><br>
+<!-- Subjects as Checkboxes -->
+        <label>Select Subjects to Study:</label><br>
+        <div class="subjects-container">
+            <div class="subject-checkbox">
+                <input type="checkbox" id="deep-learning" name="subjects" value="Deep Learning">
+                <label for="deep-learning" class="subject-label">DEEP LEARNING</label>
+            </div>
+            <div class="subject-checkbox">
+                <input type="checkbox" id="cloud-aiml" name="subjects" value="Cloud AIML">
+                <label for="cloud-aiml" class="subject-label">CLOUD AIML</label>
+            </div>
+            <div class="subject-checkbox">
+                <input type="checkbox" id="epam" name="subjects" value="EPAM">
+                <label for="epam" class="subject-label">EPAM</label>
+            </div>
+            <div class="subject-checkbox">
+                <input type="checkbox" id="test-paper" name="subjects" value="Test Paper">
+                <label for="test-paper" class="subject-label">TEST PAPER</label>
+            </div>
+            <div class="subject-checkbox">
+                <input type="checkbox" id="parallel-computing" name="subjects" value="Parallel and Distributed Computing">
+                <label for="parallel-computing" class="subject-label">PARALLEL AND DISTRIBUTED COMPUTING</label>
+            </div>
+            <div class="subject-checkbox">
+                <input type="checkbox" id="problem-solving" name="subjects" value="Problem Solving">
+                <label for="problem-solving" class="subject-label">PROBLEM SOLVING</label>
+            </div>
+        </div><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
